@@ -1,0 +1,10 @@
+﻿
+@if(Context.User.Identity.IsAuthenticated == true){
+    <img src="~/images/@Context.User.FindFirst("FOTO").Value" style="width: 50px"/>
+    <li class="nav-item">
+        <a asp-action="Perfil" asp-controller="Managed" class="nav-link">Hola, @Context.User.FindFirst(ClaimTypes.Name).Value</a>
+    </li>
+    <li class="nav-item">
+        <a asp-action="Logout" asp-controller="Managed" class="nav-link">Cerrar sesión</a>
+    </li>
+}

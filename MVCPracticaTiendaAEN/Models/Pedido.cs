@@ -1,0 +1,24 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MVCPracticaTiendaAEN.Models
+{
+    [Table("Pedidos")]
+    public class Pedido
+    {
+        [Key]
+        [Column("IDPEDIDO")]
+        public int IdPedido { get; set; }
+        [Column("IDFACTURA")]
+        public int IdFactura { get; set; }
+        [Column("FECHA")]
+        public DateTime Fecha { get; set; }
+        [Column("IDLIBRO")]
+        public int IdLibro { get; set; }
+        [Column("IDUSUARIO")]
+        public int IdUsuario { get; set; }
+        [Column("Cantidad")]
+        public int Cantidad { get; set; }
+
+    }
+}
